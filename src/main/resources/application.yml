@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: springboot-i18n-l10n
+
+  messages:
+    basename: lang/messages

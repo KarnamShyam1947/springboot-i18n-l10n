@@ -1,0 +1,39 @@
+<header th:fragment="${header}">
+    <select onchange="window.location.href=this.value">
+        <option 
+            value="?lang=en" 
+            th:selected="${@localeService.getLocale() == 'en'}">
+            English
+        </option>
+
+        <option 
+            value="?lang=hi" 
+            th:selected="${@localeService.getLocale() == 'hi'}">
+            Hindi
+        </option>
+
+        <option 
+            value="?lang=te" 
+            th:selected="${@localeService.getLocale() == 'te'}">
+            Telugu
+        </option>
+
+        <option 
+            value="?lang=ta" 
+            th:selected="${@localeService.getLocale() == 'ta'}">
+            Tamil
+        </option>
+        
+        <option 
+            value="?lang=fr" 
+            th:selected="${@localeService.getLocale() == 'fr'}">
+            French
+        </option>
+        
+        <option 
+            value="?lang=it" 
+            th:selected="${@localeService.getLocale() == 'it'}">
+            Italian
+        </option>
+    </select>
+</header>
