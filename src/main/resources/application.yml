@@ -4,3 +4,27 @@ spring:
 
   messages:
     basename: lang/messages
+
+  datasource:
+    username: admin
+    password: admin
+    # url: jdbc:mysql://localhost:3306/sb_i18n_l10n?useUnicode=true&characterEncoding=utf8mb4
+    url: jdbc:mysql://localhost:3306/sb_i18n_l10n
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  main:
+    allow-bean-definition-overriding: true
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+    properties:
+      '[hibernate.format_sql]': true
+      '[hibernate.hbm2ddl.import_files]': classpath:schema.sql
+
+app:
+  translation: 
+    serviceUrl: http://localhost:5000
+
+# spring.jpa.properties.hibernate.hbm2ddl.import_files=classpath:schema.sql
